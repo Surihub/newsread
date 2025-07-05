@@ -4,6 +4,13 @@ import pandas as pd
 from urllib.parse import quote_plus
 from datetime import datetime
 
+
+st.set_page_config(
+    page_title="뉴스 북마크",
+    page_icon="📰",  # 또는 이미지 URL도 가능
+    layout="wide"
+)
+
 def format_korean_date(pub_date_str):
     try:
         dt = datetime.strptime(pub_date_str, "%a, %d %b %Y %H:%M:%S %Z")
